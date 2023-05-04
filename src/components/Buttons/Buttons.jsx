@@ -3,11 +3,6 @@ import css from './Buttons.module.css';
 const shortid = require('shortid');
 
 class Buttons extends Component {
-  state = {
-    good: 0,
-    neutral: 0,
-    bad: 0,
-  };
 
   static defaultProps = {};
 

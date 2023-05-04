@@ -1,9 +1,16 @@
 .app {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+ gap: 25px;
+  display: inline-flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: flex-start;
   font-size: 40;
   color: #010101;
-  padding: 25px;
+  padding: 50px;
+  border-radius: 25px;
+  width: min-content;
+  height: max-content;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+
+
 }

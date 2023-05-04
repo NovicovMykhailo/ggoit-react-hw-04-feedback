@@ -1,0 +1,31 @@
+.list {
+  list-style: none;
+  font-size: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+.list > li {
+  text-transform: capitalize;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+.list span {
+  margin: 0;
+}
+h2 {
+  font-size: 30px;
+  text-transform: capitalize;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+  text-align: center;
+  border-bottom: 1px solid rgb(181, 181, 181) ;
+  margin: 0;
+  padding: 0 0 10px 0;
+
+}
