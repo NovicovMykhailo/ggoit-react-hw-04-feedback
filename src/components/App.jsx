@@ -1,16 +1,12 @@
+import css from './App.module.css';
+import Buttons from './Buttons/Buttons';
+
 export const App = () => {
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      React homework template
+    <div className={css.App}>
+      <Buttons
+        buttons={[{good:0},{neural:0},{bad:0}]}
+      />
     </div>
   );
 };
