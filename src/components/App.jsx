@@ -15,15 +15,19 @@ export class App extends Component {
   sum = 0;
 
   countTotalFeedback(data) {
-    Object.entries(data).map(item => (this.sum += item[1]));
-    return this.sum;
+    return this.sum = Object.values(data).reduce((acc, number) => acc + number);
+
   }
 
   countPositiveFeedbackPercentage(data) {
     return data.good !== 0 ? Math.round((data.good / this.sum) * 100) : 0;
   }
-  onLeaveFeedback(e) {
-    console.log(e.target);
+
+  onLeaveFeedback = (e) => {
+    this.setState(prevState => {
+     return prevState[e.target.name] += 1;
+    });
+
   }
 
   render() {
@@ -32,7 +36,7 @@ export class App extends Component {
       <div className={css.app}>
         <Section title="Please Leave your feedback" children>
           <FeedbackOptions options={this.state} onLeaveFeedback={this.onLeaveFeedback} />
-          {Object.values(this.state).some(n => n !== 0) ? (
+          {Object.values(this.state).some(values => values !== 0) ? (
             <Statistics
               good={good}
               neutral={neutral}
