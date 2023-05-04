@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import css from './Statistics.module.css';
 const shortid = require('shortid');
 
-export class Statistics extends Component {
+export default class Statistics extends Component {
   render() {
     return (
       <ul className={css.list}>
