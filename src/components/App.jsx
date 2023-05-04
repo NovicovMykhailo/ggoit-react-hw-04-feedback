@@ -1,9 +1,8 @@
-
 import React, { Component } from 'react';
 import css from './App.module.css';
-import Buttons from './Buttons/Buttons';
+import FeedbackOptions from './FeedbackOptions/FeedbackOptions';
 import { Statistics } from './Statistics/Statistics';
-import Title from './Title/Title';
+import Section from './Section/Section';
 
 export class App extends Component {
   state = {
@@ -22,22 +21,25 @@ export class App extends Component {
   countPositiveFeedbackPercentage(data) {
     return data.good !== 0 ? Math.round((data.good / this.sum) * 100) : 0;
   }
-  
+  onLeaveFeedback(e) {
+    console.log(e.target);
+  }
 
   render() {
-    const { good, neutral, bad } = this.state
+    const { good, neutral, bad } = this.state;
     return (
       <div className={css.app}>
-        <Title title={'Please Leave your feedback'} />
-        <Buttons buttons={[{ good: 0 }, { neural: 0 }, { bad: 0 }]} />
-        <Statistics
-          good={good}
-          neutral={neutral}
-          bad={bad}
-          total={this.countTotalFeedback(this.state)}
-          positivePercentage={this.countPositiveFeedbackPercentage(this.state)}
-        />
+        <Section title="Please Leave your feedback" children>
+          <FeedbackOptions options={this.state} onLeaveFeedback={this.onLeaveFeedback} />
+          <Statistics
+            good={good}
+            neutral={neutral}
+            bad={bad}
+            total={this.countTotalFeedback(this.state)}
+            positivePercentage={this.countPositiveFeedbackPercentage(this.state)}
+          />
+        </Section>
       </div>
     );
   }
-};
+}
