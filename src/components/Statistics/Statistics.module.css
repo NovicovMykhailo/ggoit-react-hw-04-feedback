@@ -20,9 +20,11 @@
 .list > li:last-child{
    padding-bottom: 35px;
     border-bottom: 1px solid rgb(181, 181, 181) ;
+    width: 100%;
 }
 .list span {
   margin: 0;
+  white-space: nowrap;
 }
 h2 {
   font-size: 30px;

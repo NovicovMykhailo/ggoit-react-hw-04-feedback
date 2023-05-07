@@ -4,10 +4,12 @@
     text-transform: capitalize;
     font-weight: 600;
     letter-spacing: 1.2px;
+     text-align: center;
 }
 section{
     display: flex;
     flex-direction: column;
     gap: 25px;
+    align-items: center;
 
 }

@@ -1,30 +1,39 @@
-.Container{
-
-    display: flex;
-    height: 50px;
-    gap: 10px;
-
+.Container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: 100%;
 }
-.button{
-    padding: 5px 10px;
-    width: 150px;
-    text-transform: capitalize;
-    border-radius: 10px;
-    cursor: pointer;
-    border: none;
-    box-shadow: rgba(124, 124, 124, 0.388) 0px 3px 8px;
-    font-weight: 500;
-    letter-spacing: 1.2px;
-    font-size: 20px;
-    
-
+.button {
+  padding: 12px 10px;
+  width: 150px;
+  width: 100%;
+  text-transform: capitalize;
+  border-radius: 10px;
+  cursor: pointer;
+  border: none;
+  box-shadow: rgba(124, 124, 124, 0.388) 0px 3px 8px;
+  font-weight: 500;
+  letter-spacing: 1.2px;
+  font-size: 20px;
 }
-.button:hover{
-    scale:1.05 ; 
-     box-shadow: rgba(50, 214, 200, 0.594) 0px 3px 8px;
+.button:hover {
+  scale: 1.05;
+  box-shadow: rgba(50, 214, 200, 0.594) 0px 3px 8px;
 }
 .button:active {
   background-color: #edfeff;
   box-shadow: rgba(41, 180, 168, 0.594) 0px 3px 8px;
   transform: translateY(4px);
+}
+@media screen and (min-width: 500px) {
+  .Container {
+    flex-direction: row;
+    flex-wrap: no-wrap;
+    width: max-content;
+  }
+  .button{
+    width: 162px;
+  }
 }
