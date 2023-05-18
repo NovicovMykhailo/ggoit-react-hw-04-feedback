@@ -22,7 +22,7 @@ export default function FeedbackOptions(props) {
   );
 }
 
-// FeedbackOptions.propTypes = {
-//   onLeaveFeedback: PropTypes.func.isRequired,
-//   options: PropTypes.object.isRequired,
-// };
+FeedbackOptions.propTypes = {
+  onLeaveFeedback: PropTypes.func.isRequired,
+  options: PropTypes.object.isRequired,
+};
