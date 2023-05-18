@@ -1,13 +1,13 @@
-import React, { Component } from 'react';
+import React from 'react';
 import css from './Statistics.module.css';
 import PropTypes from 'prop-types';
 const shortid = require('shortid');
 
-export default class Statistics extends Component {
-  render() {
+export default function Statistics(props) {
+
     return (
       <ul className={css.list}>
-        {Object.entries(this.props).map(item => {
+        {Object.entries(props).map(item => {
           if (item[0] === 'positivePercentage') {
             return (
               <li key={shortid.generate()}>
@@ -23,13 +23,13 @@ export default class Statistics extends Component {
         })}
       </ul>
     );
-  }
+  
 }
 
-Statistics.propTypes = {
-  good: PropTypes.number.isRequired,
-  neutral: PropTypes.number.isRequired,
-  bad: PropTypes.number.isRequired,
-  total: PropTypes.number.isRequired,
-  positivePercentage: PropTypes.number.isRequired,
-};
+// Statistics.propTypes = {
+//   good: PropTypes.number.isRequired,
+//   neutral: PropTypes.number.isRequired,
+//   bad: PropTypes.number.isRequired,
+//   total: PropTypes.number.isRequired,
+//   positivePercentage: PropTypes.number.isRequired,
+// };

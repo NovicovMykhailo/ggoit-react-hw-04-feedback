@@ -16,4 +16,5 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position-y: 70%;
+  min-height: 520px;
 }
